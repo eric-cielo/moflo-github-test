@@ -1,3 +1,11 @@
 node_modules/
 .claude/
 .claude-flow/
+
+# MoFlo state (gitignored)
+.claude-epic/
+.swarm/
+.moflo/
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+**/workflow-state.json
