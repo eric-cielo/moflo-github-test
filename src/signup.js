@@ -27,10 +27,13 @@ function hashPassword(password, salt) {
 
 function createUserStore() {
   const byEmail = new Map();
+  const byId = new Map();
   return {
     findByEmail: (email) => byEmail.get(email.toLowerCase()) || null,
+    findById: (id) => byId.get(id) || null,
     insert: (user) => {
       byEmail.set(user.email.toLowerCase(), user);
+      byId.set(user.id, user);
       return user;
     },
     all: () => Array.from(byEmail.values()),
@@ -82,6 +85,7 @@ module.exports = {
   signup,
   validateEmail,
   validatePassword,
+  hashPassword,
   createUserStore,
   createSessionToken,
 };
