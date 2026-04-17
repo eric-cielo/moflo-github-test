@@ -12,7 +12,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "moflo": "^4.8.74"
+    "moflo": "^4.8.75"
   },
   "devDependencies": {
     "typescript": "^6.0.2"
